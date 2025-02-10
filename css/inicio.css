@@ -1,0 +1,229 @@
+main{
+  overflow: hidden;
+}
+
+.containerPases {
+  background-color: rgb(25, 29, 33);
+  width: 300%;
+  height: 86vh;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.pase {
+  width: 33.333%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.textoPase {
+  width: 40%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  justify-content: center;
+  padding-left: 5%;
+  padding-right: 5%;
+}
+
+.tituloPase {
+  font-size: 3rem;
+  font-weight: 500;
+  color: white;
+  margin-bottom: 2rem;
+}
+
+.parrafoPase {
+  font-size: 1.2rem;
+  font-weight: 200;
+  color: white;
+  line-height: 2rem;
+  letter-spacing: 0.07rem;
+}
+
+.imagenPase {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content:center;
+}
+
+.fondoImagenPase1 {
+  background-image: url(/img/ordenador.svg);
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-size:contain;
+  width: 100%;
+  height: 80%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.videoCuadro{
+  width: 100%;
+  position:absolute;
+}
+
+.fondoImagenPase2 {
+  background-image: url(/img/movil.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size:contain;
+  width: 100%;
+  height: 80%;
+  filter: drop-shadow(10px 10px 10px rgba(0, 0, 0, 0.364));
+}
+
+.videoWhatsapp{
+  width: 100%;
+  height: 80%;
+  transform: translateY(10%);
+}
+
+.fondoImagenPase3 {
+  background-image: url(/img/movil.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size:contain;
+  width: 100%;
+  height: 80%;
+  filter: drop-shadow(10px 10px 10px rgba(0, 0, 0, 0.364));
+}
+
+.videoApp{
+  width: 100%;
+  height: 80%;
+  transform: translateY(10%);
+}
+
+
+
+@media screen and (max-width: 800px) {
+  .containerPases {
+    height: 135vh;
+  }
+
+  .pase {
+    flex-direction: column-reverse;
+  }
+
+  .tituloPase {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+
+  .textoPase {
+    width: 95%;
+    justify-content: flex-start;
+  }
+
+  .parrafoPase {
+    font-size: 1rem;
+    line-height: 1.5rem;
+  }
+
+  .imagenPase {
+    width: 80%;
+  }
+
+}
+
+.serviciosContainer {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.servicio {
+  width: 280px;
+  padding: 10px;
+  background-color: var(--negroAzulado);
+  margin: 10px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75);
+  cursor: pointer;
+}
+
+.imgServicio{
+  width: 100%;
+  height: 260px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 7px 7px 0 0;
+}
+
+.botonServicioContainer{
+  width: 100%;
+  height: 100%;
+  background-color: rgba(12, 18, 26, 0);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  transition: all 0.5s;
+}
+
+.servicio:hover .botonServicioContainer{
+  background-color: rgba(12, 18, 26, 0.8);
+}
+
+.botonServicio{
+  width: 50%;
+  height: 40px;
+  background-color: none;
+  color: rgba(255, 255, 255, 0.705);
+  border: solid 2px rgba(255, 255, 255, 0.705);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  margin-bottom: 2rem;
+  transition: all 0.5s;
+  opacity: 0;
+}
+
+.botonServicio:hover{
+  background-color: var(--negroAzulado);
+}
+
+.servicio:hover .botonServicio{
+  opacity: 1;
+}
+
+.tituloServicio{
+  text-align: left;
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.705);
+  margin-top: 0.7rem;
+}
+
+.textoServicio{
+  text-align: left;
+  font-size: 1rem;
+  font-weight: 300;
+  color: rgba(255, 255, 255, 0.705);
+  margin-top: 0.7rem;
+  line-height: 1.5rem;
+}
+
+.imgServiciosCuadroDeMando{ background-image: url('/img/CuadroDeMandoInicio.webp'); }
+.imgServiciosEcommerceB2b{ background-image: url('/img/EcommerceInicio.webp'); }
+.imgServiciosApps{ background-image: url('/img/AppsInicio.webp'); }
+.imgServiciosWairbot{ background-image: url('/img/WairBotInicio.webp'); }
+.imgServiciosRealidadAumentada{ background-image: url('/img/RealidadAumentadaInicio.webp'); }

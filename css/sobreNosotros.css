@@ -1,0 +1,48 @@
+.cabeceraPaginaSobreNosotros{
+    background-image: url(/img/sobreNosotrosCabecera.webp);
+}
+
+.botonEjemplos{
+    width: 50%;
+    height: 40px;
+    background-color: none;
+    color: rgba(255, 255, 255, 0.705);
+    border: solid 2px rgba(255, 255, 255, 0.705);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    margin-bottom: 3.5rem;
+    transition: all 0.5s;
+}
+
+.botonEjemplos:hover{
+    background-color: var(--negroAzulado);
+}
+
+.logosEmpresas{
+    background-image: url(/img/sobreNosotrosLogosEmpresas.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 100%;
+    height: 40vh;    
+}
+
+@media screen and (max-width: 800px) {
+    .botonEjemplos{
+        width: 95%;
+    }
+    .tituloServicio{
+        font-size: 1.2rem;
+    }
+    .textoServicio{
+        font-size: 0.8rem;
+    }
+    .logosEmpresas{
+        background-image: url(/img/sobreNosotrosLogosEmpresasMovil.svg);
+        height: 150vh;
+    }
+
+}

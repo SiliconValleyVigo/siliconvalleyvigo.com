@@ -1,0 +1,116 @@
+:root {
+  --degradoRojo: linear-gradient(90deg, #fc1c03 14%, #570303 100%);
+  --negroAzulado: #191d21;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  height: 100%;
+  margin: 0;
+  overflow-x: hidden;
+}
+
+body::-webkit-scrollbar {
+  width: 0.4em;
+  background-color: #2d2d2d;
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: #000000;
+}
+
+body::-webkit-scrollbar-thumb:hover {
+  background-color: #9c1504;
+}
+
+.fondoRojo{
+  background: var(--degradoRojo);
+}
+
+h1{
+  margin: 0;
+  text-align: center;
+  padding-top: 3rem;
+  font-size: 3rem;
+}
+
+.cabeceraPagina{
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 75vh;
+  padding: 5%;
+}
+
+.tituloPagina{
+  color: white;
+  font-size: 6rem;
+  font-weight: 500;
+  text-align: left;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+  width: 50%;
+  text-shadow: 3px 3px 3px #000000;
+}
+
+.seccionPagina{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 60%;
+  margin: 0 auto;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+.parrafoPagina{
+  font-size: 1.2rem;
+  text-align: justify;
+  padding-bottom: 2rem;
+  width: 100%;
+  line-height: 1.7rem;
+  color: rgba(255, 255, 255, 0.904);
+}
+
+.descripcionVideo{
+  font-size: 1rem;
+  text-align: left;
+  padding-bottom: 2rem;
+  width: 100%;
+  line-height: 1rem;
+  color: rgba(14, 14, 14, 0.726);
+  padding-top: 0.5rem;
+}
+
+.imagenPagina{
+  width: 100%;
+}
+
+.imagenPagina img{
+  width: 100%;
+}
+
+.imagenPagina video{
+  width: 100%;
+  max-height: 80vh;
+}
+
+@media screen and (max-width: 800px) {
+  .tituloPagina{
+    padding-top: 0.2rem;
+    font-size: 2rem;
+    width: 100%;
+  }
+
+  .seccionPagina{
+    width: 90%;
+  }
+
+  .parrafoPagina{
+    font-size: 1rem;
+    line-height: 1.5rem;
+    text-align: left;
+  }
+}
+
+

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>QR Code Scanner</title>
+    <script src="https://cdn.jsdelivr.net/npm/jsqr"></script>
+</head>
+<body>
+    <textarea id="imageUrls" rows="5" cols="50" placeholder="Ingrese URLs de imágenes PNG con códigos QR"></textarea>
+    <button onclick="processImages()">Procesar Imágenes</button>
+    <div id="qrResults"></div>
+
+    <script>
+        async function processImages() {
+            var imageUrls = document.getElementById('imageUrls').value.split('\n').filter(url => url.trim() !== '');
+            var qrResults = document.getElementById('qrResults');
+            qrResults.innerHTML = '';
+
+            for (var i = 0; i < imageUrls.length; i++) {
+                try {
+                    var code = await readQRCode(imageUrls[i]);
+                    if (code) {
+                        var resultItem = document.createElement('p');
+                        resultItem.textContent = 'Imagen ' + (i + 1) + ': ' + code.data;
+                        qrResults.appendChild(resultItem);
+                    } else {
+                        var errorItem = document.createElement('p');
+                        errorItem.textContent = 'Imagen ' + (i + 1) + ': No se encontraron códigos QR en la imagen.';
+                        qrResults.appendChild(errorItem);
+                    }
+                } catch (error) {
+                    var errorItem = document.createElement('p');
+                    errorItem.textContent = 'Error al procesar la imagen ' + (i + 1) + ': ' + error.message;
+                    qrResults.appendChild(errorItem);
+                }
+            }
+        }
+
+        function readQRCode(imageUrl) {
+            return new Promise((resolve, reject) => {
+                var img = new Image();
+                img.crossOrigin = 'Anonymous';
+                img.onload = function() {
+                    var canvas = document.createElement('canvas');
+                    canvas.width = img.width;
+                    canvas.height = img.height;
+                    var ctx = canvas.getContext('2d');
+                    ctx.drawImage(img, 0, 0, img.width, img.height);
+                    var imageData = ctx.getImageData(0, 0, canvas.width, canvas.height);
+                    var code = jsQR(imageData.data, imageData.width, imageData.height);
+                    if (code) {
+                        resolve(code);
+                    } else {
+                        reject(new Error('No se encontraron códigos QR en la imagen.'));
+                    }
+                };
+                img.onerror = function() {
+                    reject(new Error('Error al cargar la imagen.'));
+                };
+                img.src = imageUrl;
+            });
+        }
+    </script>
+</body>
+</html>

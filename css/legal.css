@@ -1,0 +1,11 @@
+.mainLegal{
+    width: 50%;
+    padding-left: calc(50% / 2);
+}
+
+@media screen and (max-width: 800px){
+    .mainLegal{
+        width: 90%;
+        padding-left: calc(10% / 2);
+    }
+}

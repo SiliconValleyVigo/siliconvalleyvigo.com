@@ -1,0 +1,69 @@
+.cabeceraPaginaWairbot{
+    background-image: url(/img/WairBotCabecera.webp);
+}
+
+.tituloPaginaWairbot{
+    width: 50%;
+    text-align: right;
+    padding-left: 50%;
+}
+
+.wairbotContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 20vh;
+    margin: 0 auto;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    transition: all 0.5s;
+}
+
+.wairbotContainer a{
+    background-image: url(/img/logoWairbotBlanco.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    width: 100%;
+    height: 10vh;
+}
+
+.wairbotTexto{
+    color: rgba(0, 0, 0, 0.753) !important;
+    font-size: 1.2rem !important;
+    font-weight: 700 !important;
+    padding-bottom: 0.2rem !important;
+}
+
+.tituloVideoWhatsapp{
+    color: white;
+    font-size: 1.2rem;
+    font-weight: 500;
+    text-align: center;
+    padding-bottom: 1rem;
+}
+
+.wairbotImagenPagina{
+    width: 80%;
+    padding: 2rem;
+    background-color: white;
+}
+
+.imagenPagina button{
+    width: 100%;
+}
+
+.videoPagina{
+    background-color: rgba(255, 255, 255, 0);
+}
+
+
+@media screen and (max-width: 800px) {
+    .tituloPaginaWairbot{
+        width: 100%;
+        text-align: left;
+        padding-left: 0;
+    }
+}

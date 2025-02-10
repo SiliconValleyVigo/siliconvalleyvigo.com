@@ -1,0 +1,71 @@
+footer{
+    background-color: rgb(25, 29, 33);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: flex-start;
+    width: 100%;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+}
+
+.footerMenuItems{
+    padding-left: 0.5rem;
+    border-left: solid 1px rgba(0, 0, 0, 0.445);
+    color: rgba(255, 255, 255, 0.651);
+    font-size: 0.8rem;
+    font-weight: 300;
+}
+
+.footerMenuItem{
+    cursor: pointer;
+    margin-bottom: 0.5rem;
+    padding: 0.5rem;
+    background-color: rgba(0, 0, 0, 0);
+    transition: all 0.5s;
+}
+
+.footerMenuItem:hover{
+    background-color: rgba(0, 0, 0, 0.534);
+}
+
+
+.footerLogo{
+    width: 100%;
+    height: 3vh;
+    background-image: url(/img/logoSiliconApaisado.svg);
+    background-position: left;
+    background-repeat: no-repeat;
+    background-size: contain;
+    margin-left: 0.5rem;
+}
+
+a{
+    text-decoration: none;
+}
+
+.footerMail{
+    color: rgba(255, 255, 255, 0.651);
+    transition: all 0.5s;
+}
+
+.footertelefono{
+    color: rgba(255, 255, 255, 0.651);
+    transition: all 0.5s;
+}
+
+@media screen and (max-width: 800px){
+    .not800px{
+        display: none;
+    }
+
+    footer{
+        flex-direction: column;
+    }
+
+    .footerMenuItems{
+        margin-bottom: 3rem;
+    }
+}
+
+
