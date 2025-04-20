@@ -14,3 +14,10 @@
 
 **/prueba.json
 **/example.json
+**/composer.lock
+
+# Generated files
+apis-genericas/create-excel-url/files/*.xlsx
+apis-genericas/create-qr-url/files/*.png
+apis-genericas/get-image-url/files/
+apis-genericas/create-qr-url/codigo_qr.png
